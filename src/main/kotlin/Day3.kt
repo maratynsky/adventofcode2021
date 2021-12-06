@@ -1,5 +1,4 @@
 import java.lang.RuntimeException
-import java.util.function.BiFunction
 
 /**
  * https://adven tofcode.com/2021/day/3
