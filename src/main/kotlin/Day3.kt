@@ -3,8 +3,8 @@ import java.lang.RuntimeException
 /**
  * https://adven tofcode.com/2021/day/3
  */
-val n = 12;
-fun d3p1(): Long = read("/day3.in").useLines {
+
+fun d3p1(n:Int): Long = read("/day3.in").useLines {
     val stats = Array(n) { 0 }
     it.forEach { report ->
         report.forEachIndexed { i, bit ->
@@ -20,7 +20,7 @@ fun d3p1(): Long = read("/day3.in").useLines {
     return gamma * epsilon
 }
 
-fun d3p2e2(): Long = read("/day3.in").useLines {
+fun d3p2(): Long = read("/day3.in").useLines {
     val list = it.toList()
     return 1L * bar(list, 0, true) * bar(list, 0, false)
 }
@@ -40,6 +40,6 @@ fun bar(list: List<String>, idx: Int, common:Boolean): Int {
 
 
 fun main() {
-    println(d3p1())
-    println(d3p2e2())
+    println(d3p1(12))
+    println(d3p2())
 }

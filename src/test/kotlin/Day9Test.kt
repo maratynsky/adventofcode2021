@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 
-internal class Day9KtTest {
+internal class Day9Test {
 
     @Test
     fun d9p1test() {
