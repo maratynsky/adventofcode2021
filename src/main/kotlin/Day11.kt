@@ -3,7 +3,6 @@ fun d11p1(): Int = read("/day11.in").useLines { lines ->
         .map { it.toIntArray() }
         .toList().toTypedArray()
 
-//    octopuses.printt(0)
     return (1..100).sumOf { octopuses.step() }
 }
 
@@ -16,22 +15,7 @@ fun Octopuses.step(): Int {
         }
     }.sum()
     reset()
-//    printt(flashes)
     return flashes
-}
-
-fun Octopuses.printt(flashes: Int) {
-    println("\nOctopuses $flashes")
-    for (y in this.indices) {
-        for (x in this[y].indices) {
-            if (this[y][x] == 0) {
-                print("*")
-            } else {
-                print(this[y][x])
-            }
-        }
-        println()
-    }
 }
 
 fun Octopuses.incEnergy(x: Int, y: Int) = when {
