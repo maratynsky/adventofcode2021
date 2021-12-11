@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Assertions.*
 internal class Day6Test {
 
     @Test
-    fun d6p1test() {
+    fun p1test() {
         assertEquals(5934, d6p1())
     }
 
     @Test
-    fun d6p2test() {
+    fun p2test() {
         assertEquals(26984457539, d6p2())
     }
 }
