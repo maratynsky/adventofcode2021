@@ -7,6 +7,7 @@ fun d0p2(): Int = read("/day0.in").useLines {
 }
 
 fun main() {
-    println(d0p1())
-    println(d0p2())
+    println("Day 0")
+    println(" ├─ ${d0p1()}")
+    println(" └─ ${d0p2()}")
 }
