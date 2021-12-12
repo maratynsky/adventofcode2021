@@ -31,7 +31,7 @@ fun d9p2(): Int = read("/day9.in").useLines { lines ->
         .toList().toTypedArray()
 
     data.flatMapIndexed { row, rowData ->
-        rowData.mapIndexed() { col, h ->
+        rowData.mapIndexed() { col, _ ->
             if (data.isLowPoint(row, col)) data.basinSize(row, col) else -1
         }
     }.asSequence()
