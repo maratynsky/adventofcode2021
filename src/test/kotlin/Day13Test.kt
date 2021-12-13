@@ -14,10 +14,10 @@ internal class Day13Test {
         assertEquals(
             """
             █████
-            █   █
-            █   █
-            █   █
-            █████
+                █   █
+                █   █
+                █   █
+                █████
             """.trimIndent(), d13p2().trim()
         )
     }
