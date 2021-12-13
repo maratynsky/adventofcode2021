@@ -62,6 +62,7 @@ fun d11p2(): Int = read("/day11.in").useLines { lines ->
 }
 
 fun main() {
-    println(d11p1())
-    println(d11p2())
+    println("Day 11")
+    println(" ├─ ${d11p1()}")
+    println(" └─ ${d11p2()}")
 }

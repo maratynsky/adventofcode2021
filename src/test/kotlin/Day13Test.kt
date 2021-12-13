@@ -13,11 +13,11 @@ internal class Day13Test {
     fun p2test() {
         assertEquals(
             """
-            #####
-            #...#
-            #...#
-            #...#
-            #####
+            █████
+            █   █
+            █   █
+            █   █
+            █████
             """.trimIndent(), d13p2().trim()
         )
     }

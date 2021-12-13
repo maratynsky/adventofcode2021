@@ -44,9 +44,9 @@ fun d13p2(): String = read("/day13.in").useLines { lines ->
         val strBuilder = StringBuilder()
         for (y in (0 .. this.second)) {
             for (x in (0 .. this.first)){
-                strBuilder.append(if(result.contains(x to y)) '#' else '.')
+                strBuilder.append(if(result.contains(x to y)) '█' else ' ')
             }
-            strBuilder.append('\n')
+            strBuilder.append("\n    ")
         }
         strBuilder.toString()
     }
@@ -55,5 +55,5 @@ fun d13p2(): String = read("/day13.in").useLines { lines ->
 fun main() {
     println("Day 13")
     println(" ├─ ${d13p1()}")
-    println(" └─↓ \n${d13p2()}")
+    println(" └─ ${d13p2()}")
 }

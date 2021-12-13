@@ -73,6 +73,7 @@ fun d4p2(): Int = read("/day4.in").useLines {
 
 
 fun main() {
-    println(d4p1())
-    println(d4p2())
+    println("Day 4")
+    println(" ├─ ${d4p1()}")
+    println(" └─ ${d4p2()}")
 }

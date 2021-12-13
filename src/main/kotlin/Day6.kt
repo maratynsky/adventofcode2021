@@ -27,6 +27,6 @@ fun d6p2(): Long = read("/day6.in").readText().splitToSequence(",")
 
 fun main() {
     println("Day 6")
-    println("\tPart 1: " + d6p1())
-    println("\tPart 2: " + d6p2())
+    println(" ├─ ${d6p1()}")
+    println(" └─ ${d6p2()}")
 }

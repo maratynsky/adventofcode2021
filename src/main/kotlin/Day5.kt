@@ -36,6 +36,7 @@ fun isVerticalOrHorizontal(p1: Point, p2: Point): Boolean = p1.first == p2.first
 fun String.toPoint(): Point = Point(this.substringBefore(",").toInt(), this.substringAfter(",").toInt())
 
 fun main() {
-    println(d5p1())
-    println(d5p2())
+    println("Day 5")
+    println(" ├─ ${d5p1()}")
+    println(" └─ ${d5p2()}")
 }

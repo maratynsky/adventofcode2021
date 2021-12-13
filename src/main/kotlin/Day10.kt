@@ -54,6 +54,7 @@ fun d10p2(): Long = read("/day10.in").useLines { lines ->
 }
 
 fun main() {
-    println(d10p1())
-    println(d10p2())
+    println("Day 10")
+    println(" ├─ ${d10p1()}")
+    println(" └─ ${d10p2()}")
 }

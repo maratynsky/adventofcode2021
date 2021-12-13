@@ -40,6 +40,7 @@ fun bar(list: List<String>, idx: Int, common:Boolean): Int {
 
 
 fun main() {
-    println(d3p1(12))
-    println(d3p2())
+    println("Day 3")
+    println(" ├─ ${d3p1(12)}")
+    println(" └─ ${d3p2()}")
 }

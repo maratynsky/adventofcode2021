@@ -57,6 +57,7 @@ fun Array<IntArray>.basinSize(row: Int, col: Int): Int {
 }
 
 fun main() {
-    println(d9p1())
-    println(d9p2())
+    println("Day 9")
+    println(" ├─ ${d9p1()}")
+    println(" └─ ${d9p2()}")
 }

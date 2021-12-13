@@ -107,6 +107,7 @@ fun getNum(digit: String) = when (digit.length) {
 }
 
 fun main() {
-    println(d8p1())
-    println(d8p2())
+    println("Day 8")
+    println(" ├─ ${d8p1()}")
+    println(" └─ ${d8p2()}")
 }

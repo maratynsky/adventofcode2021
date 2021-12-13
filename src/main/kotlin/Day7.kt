@@ -55,6 +55,7 @@ fun requiredFuel(crabs: List<Int>, position: Int) = crabs.sumOf { distance(it, p
 fun distance(from: Int, to: Int) = (1 + abs(to - from)) * abs(to - from) / 2
 
 fun main() {
-    println(d7p1())
-    println(d7p2())
+    println("Day 7")
+    println(" ├─ ${d7p1()}")
+    println(" └─ ${d7p2()}")
 }

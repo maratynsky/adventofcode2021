@@ -38,6 +38,7 @@ fun d2p2(): Long = read("/day2.in").useLines {
 }
 
 fun main() {
-    println(d2p1())
-    println(d2p2())
+    println("Day 2")
+    println(" ├─ ${d2p1()}")
+    println(" └─ ${d2p2()}")
 }
