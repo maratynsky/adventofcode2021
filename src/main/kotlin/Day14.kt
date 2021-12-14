@@ -1,26 +1,3 @@
-import java.util.concurrent.atomic.LongAdder
-
-open class Element(val name: Char) {
-    var next: Element? = null
-
-    open fun insert(next: Element): Element {
-        next.next = this.next
-        this.next = next
-        return next
-    }
-
-}
-
-class Polymer(val root: Element) : Sequence<Element> {
-
-    override fun iterator(): Iterator<Element> = object : Iterator<Element> {
-        private var current: Element = root
-        override fun hasNext() = current.next != null
-        override fun next() = current.next!!
-    }
-}
-
-
 fun d14p1(): Int = read("/day14.in").useLines { lines ->
     lines.filter(String::isNotBlank).partition { it.contains("->") }
         .let { (rules, template) ->
