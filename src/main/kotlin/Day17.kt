@@ -76,7 +76,7 @@ fun d17p1(): Int = read("/day17.in").useLines { lines ->
     throw RuntimeException("Could not solve the problem")
 }
 
-fun d17p2(): Int = read("/day17.in").useLines {lines ->
+fun d17p2(): Int = read("/day17.in").useLines { lines ->
     val target = "target area: x=(-?\\d+)\\.\\.(-?\\d+), y=(-?\\d+)\\.\\.(-?\\d+)".toRegex()
         .find(lines.first())!!.groupValues
         .let { Target(it[1].toInt(), it[2].toInt(), it[3].toInt(), it[4].toInt()) }
