@@ -51,7 +51,6 @@ fun d17p1(): Int = read("/day17.in").useLines { lines ->
     val target = "target area: x=(-?\\d+)\\.\\.(-?\\d+), y=(-?\\d+)\\.\\.(-?\\d+)".toRegex()
         .find(lines.first())!!.groupValues
         .let { Target(it[1].toInt(), it[2].toInt(), it[3].toInt(), it[4].toInt()) }
-        .also { println(it) }
 
     val initialPos = XY(0, 0)
 
@@ -77,8 +76,35 @@ fun d17p1(): Int = read("/day17.in").useLines { lines ->
     throw RuntimeException("Could not solve the problem")
 }
 
-fun d17p2(): Int = read("/day17.in").useLines {
-    return 0
+fun d17p2(): Int = read("/day17.in").useLines {lines ->
+    val target = "target area: x=(-?\\d+)\\.\\.(-?\\d+), y=(-?\\d+)\\.\\.(-?\\d+)".toRegex()
+        .find(lines.first())!!.groupValues
+        .let { Target(it[1].toInt(), it[2].toInt(), it[3].toInt(), it[4].toInt()) }
+
+    val initialPos = XY(0, 0)
+
+    val velocityXBounds = 1 to target.x2
+    val velocityYBounds = when {
+        target.y1 >= 0 -> 1 to target.y2
+        target.y2 < 0 -> target.y1 to -target.y1 - 1
+        else -> throw RuntimeException("Unsupported target position")
+    }
+
+    var count = 0
+
+    for (velocityY in (velocityYBounds.second downTo velocityYBounds.first)) {
+        for (velocityX in (velocityXBounds.first..velocityXBounds.second)) {
+            val lastPosition = trajectory(initialPos, XY(velocityX, velocityY)) {
+                target.test(it) >= 0
+            }.last()
+            if (target.test(lastPosition) == 0) {
+                count++
+            }
+        }
+    }
+
+
+    return count
 }
 
 fun main() {

@@ -11,6 +11,6 @@ internal class Day17Test {
 
     @Test
     fun p2test() {
-        assertEquals(45, d17p2())
+        assertEquals(112, d17p2())
     }
 }
