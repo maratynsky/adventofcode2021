@@ -1,4 +1,4 @@
-data class Node(
+data class Node15(
     val risk: Int,
     val pos: Position,
     var shortestPath: Int = Integer.MAX_VALUE,
@@ -8,7 +8,7 @@ data class Node(
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
 
-        other as Node
+        other as Node15
 
         if (pos != other.pos) return false
 
@@ -19,7 +19,7 @@ data class Node(
         return pos.hashCode()
     }
 }
-typealias Graph = Array<Array<Node>>
+typealias Graph = Array<Array<Node15>>
 
 data class Position(val x: Int, val y: Int)
 
@@ -40,9 +40,9 @@ fun Graph.getNeighbors(pos: Position) =
         .toList()
 
 
-val nodes: HashSet<Node> = HashSet()
+val nodes: HashSet<Node15> = HashSet()
 
-fun Graph.getMin(): Pair<Position, Node> {
+fun Graph.getMin(): Pair<Position, Node15> {
     if(nodes.isNotEmpty()){
         return nodes.minByOrNull { it.shortestPath }!!.let { it.pos to it }
     }
@@ -63,12 +63,12 @@ fun Graph.extend(times: Int) = Graph(this.size * times) { y ->
         val add = (y / this.size) + (x / this[originalY].size)
         val pos = (x % this[originalY].size) x originalY
         val risk = this[pos].risk + add
-        Node(if (risk > 9) (risk % 10 + 1) else risk, x x y)
+        Node15(if (risk > 9) (risk % 10 + 1) else risk, x x y)
     }
 }
 
 fun readGraph(lines: Sequence<String>): Graph =
-    lines.mapIndexed { y, line -> line.map(Char::digitToInt).mapIndexed{x,d -> Node(d, x x y)}.toTypedArray() }
+    lines.mapIndexed { y, line -> line.map(Char::digitToInt).mapIndexed{x,d -> Node15(d, x x y)}.toTypedArray() }
         .toList()
         .toTypedArray()
 
