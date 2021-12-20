@@ -6,11 +6,11 @@ internal class Day18Test {
 
     @Test
     fun p1test() {
-        assertEquals(0, d18p1())
+        assertEquals(4140, d18p1())
     }
 
     @Test
     fun p2test() {
-        assertEquals(0, d18p2())
+        assertEquals(3993, d18p2())
     }
 }
